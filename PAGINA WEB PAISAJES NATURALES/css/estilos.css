@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+h1{
+   font-family: 'Oswald';
+}
+
+p{
+    font-family: 'Old Standard TT';
+}
+
+p::selection {
+   background: #9FF781;
+   color: #F55B99;
+}
+
+*::-moz-selection{
+   background:  #9FF781;
+   color: black;
+}
+
+.imagen{
+    
+    background:url('../images/portada.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.titulo{
+    font-family: 'Amatic SC';
+    font-size: 500%;
+    font-weight: bold;
+    color:white;
+    border: solid 2px;
+    padding:10px;
+}
+
+.fondo{
+    
+    background:url('../images/bosque5.jpeg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+
+
+
+
+
+
+
+
+

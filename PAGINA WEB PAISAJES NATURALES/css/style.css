@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------------------------------------------------------------------------------------------CLEARFIX*/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* ==========================
+   01 - MENU FULLPAGE CSS
+========================== */
+
+.panel {
+    position: fixed;
+    left: -100%; /*left or right and the width of your navigation panel*/
+    width: 100%; /*should match the above value*/
+}
+
+.menu-link i {
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff;
+}
+
+#menu{
+    background: rgba(33, 33, 33, 0.6);
+    z-index: 998;
+}
+
+#menu ul{
+    margin-top: 150px;
+}
+
+#menu li{
+    text-align: center;
+    transition: all 0.4s ease;
+    padding: 20px 0;
+}
+
+#menu li a{
+    color: #fff;
+    font-size: 35px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+#menu li:hover{
+    background: rgba(33, 33, 33, 0.8);
+}
+
+.menu-link {
+  z-index: 999;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+  background-color: transparent;
+}
+
+.menu-link:focus {
+  outline: none;
+}
+
+.menu-link span {
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 18px;
+  right: 18px;
+  height: 6px;
+  border-radius: 2px;
+  background: white;
+  -webkit-transition: background 0 0.3s;
+          transition: background 0 0.3s;
+}
+
+.menu-link span::before,
+.menu-link span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #fff;
+  content: "";
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0;
+}
+
+.menu-link span::before {
+  top: -15px;
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.menu-link span::after {
+  bottom: -15px;
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.menu-open {
+  background-color: transparent;
+}
+
+.menu-open span {
+  background: none;
+}
+
+.menu-open span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-open span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu-open span::before,
+.menu-open span::after {
+  -webkit-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s;
+}
+
+/* ==========================
+   02 - HOME CSS
+========================== */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#home{
+    background: #56be8d;
+    height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+}
+
+.big-title{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 100px;
+    color: #335545;
+}
+
+.text-home{
+    margin-top: 30px;
+    font-size: 18px;
+    color: #335545;
+}
+
+.text-home a{
+    color: #335545;
+    text-decoration: none;
+    transition: all linear 0.3s;
+}
+
+.text-home a:hover{
+    color: white;
+}
+
+.big-button{
+    display: inline-block;
+    border: 2px solid #335545;
+    text-decoration: none;
+    padding:20px 15px;
+    color: #335545;
+    margin-top: 50px;
+    border-radius: 30px;
+    transition: all linear 0.3s;
+}
+
+a.big-button:hover{
+    background: #335545;
+    color: #56be8d;
+}
+
+.social{
+    margin-top: 40px;
+}
+
+.social a{
+    color: #335545;
+    transition: all linear 0.3s;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.social a:hover{
+    color: white;
+}
+
+.scroll-down{
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+.scroll-down i{
+    font-size: 30px;
+    color: #335545;
+}
+
+/* ==========================
+   02 - INSTALLATION CSS
+========================== */
+
+#installation{
+    background: #eeeeee;
+    padding-bottom: 60px;
+}
+
+.medium-title{
+    text-align: center;
+    font-size: 40px;
+    color: #78767e;
+    padding: 70px 0 50px 0;
+}
+
+.text-installation{
+    margin-top: 30px;
+    font-size: 18px;
+    color: #78767e;
+}
+
+.text-installation a{
+    color: #78767e;
+    text-decoration: none;
+    transition: all linear 0.3s;
+}
+
+.text-installation a:hover{
+    color: #d94141;
+}
+
+.step{
+    margin: 40px auto;
+    border: 1px solid #78767e;
+    border-radius: 5px;
+    min-height: 230px;
+    width: 800px;
+    background: white;
+    display: block;
+    
+}
+
+/* ==========================
+   03 - CONTACT CSS
+========================== */
+
+#contact{
+    background: #56be8d;
+    height: 300px;
+    text-align: center;
+}
+
+#contact img{
+    width: 200px;
+    margin-top: 60px;
+}
